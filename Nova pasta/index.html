@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema Escolar</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="Atv.css">
+</head>
+
+<body>
+
+  <!-- CABEÇALHO -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">Sistema Escolar</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#cadastro">Cadastro</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#alterar">Alterar</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#consultar">Consultar</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#excluir">Excluir</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- ÁREA PRINCIPAL / CABEÇALHO -->
+  <header class="cabecalho">
+    <div class="container">
+      <h1>Sistema Escolar</h1>
+      <h2>Gestão de alunos e informações acadêmicas</h2>
+      <p>
+        Um sistema simples para cadastrar, alterar, consultar e excluir
+        informações dos alunos.
+      </p>
+    </div>
+  </header>
+
+
+  <!-- CAROUSEL -->
+  <div id="carouselEscolar" class="carousel slide" data-bs-ride="carousel">
+
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselEscolar" data-bs-slide-to="0"
+        class="active" aria-current="true"></button>
+      <button type="button" data-bs-target="#carouselEscolar" data-bs-slide-to="1"></button>
+      <button type="button" data-bs-target="#carouselEscolar" data-bs-slide-to="2"></button>
+    </div>
+
+    <div class="carousel-inner">
+
+      <div class="carousel-item active">
+        <img src="https://www.albertoferes.com.br/img/fachada.jpg" class="d-block w-100" alt="Escola">
+        <div class="carousel-caption">
+          <h3>Gestão Escolar</h3>
+          <p>Organize os dados dos alunos de forma simples e rápida.</p>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <img src="https://tse2.mm.bing.net/th/id/OIP.tsgfA8Z7ov1hU4siDBH76QAAAA?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" class="d-block w-100" alt="Estudantes">
+        <div class="carousel-caption">
+          <h3>Controle de Alunos</h3>
+          <p>Consulte informações acadêmicas sempre que precisar.</p>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <img src="https://tse1.mm.bing.net/th/id/OIP.EwfeMhBTd2L1Qd4IcPc71wAAAA?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" class="d-block w-100" alt="Sala de aula">
+        <div class="carousel-caption">
+          <h3>Organização</h3>
+          <p>Tenha as principais informações escolares em um só lugar.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <button class="carousel-control-prev" type="button"
+      data-bs-target="#carouselEscolar" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+
+    <button class="carousel-control-next" type="button"
+      data-bs-target="#carouselEscolar" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+
+
+  <!-- CARDS / CRUD -->
+  <section id="cadastro" class="container my-5">
+    <h2 class="text-center mb-4">Gerenciamento Escolar</h2>
+
+    <div class="row g-4">
+
+      <!-- CADASTRAR -->
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="card text-center h-100">
+          <div class="card-body">
+            <i class="bi bi-person-plus-fill icone"></i>
+            <h5 class="card-title">Cadastrar</h5>
+            <p class="card-text">
+              Cadastre novos alunos no sistema escolar.
+            </p>
+
+            <button class="btn btn-primary" data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasCadastro">
+              Acessar
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ALTERAR -->
+      <div class="col-12 col-md-6 col-lg-3" id="alterar">
+        <div class="card text-center h-100">
+          <div class="card-body">
+            <i class="bi bi-pencil-square icone"></i>
+            <h5 class="card-title">Alterar</h5>
+            <p class="card-text">
+              Atualize os dados cadastrados de um aluno.
+            </p>
+
+            <button class="btn btn-warning" data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasAlterar">
+              Acessar
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- CONSULTAR -->
+      <div class="col-12 col-md-6 col-lg-3" id="consultar">
+        <div class="card text-center h-100">
+          <div class="card-body">
+            <i class="bi bi-search icone"></i>
+            <h5 class="card-title">Consultar</h5>
+            <p class="card-text">
+              Pesquise alunos e visualize seus dados.
+            </p>
+
+            <button class="btn btn-success" data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasConsultar">
+              Acessar
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- EXCLUIR -->
+      <div class="col-12 col-md-6 col-lg-3" id="excluir">
+        <div class="card text-center h-100">
+          <div class="card-body">
+            <i class="bi bi-person-x-fill icone"></i>
+            <h5 class="card-title">Excluir</h5>
+            <p class="card-text">
+              Remova um cadastro do sistema escolar.
+            </p>
+
+            <button class="btn btn-danger" data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasExcluir">
+              Acessar
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- OFFCANVAS CADASTRO -->
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasCadastro">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title">Cadastrar aluno</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+
+    <div class="offcanvas-body">
+      <form>
+        <div class="mb-3">
+          <label class="form-label">Nome</label>
+          <input type="text" class="form-control" placeholder="Nome do aluno">
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">RA</label>
+          <input type="text" class="form-control" placeholder="Registro do aluno">
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Turma</label>
+          <input type="text" class="form-control" placeholder="Ex.: 2º DS">
+        </div>
+
+        <button type="button" class="btn btn-primary w-100">Cadastrar</button>
+      </form>
+    </div>
+  </div>
+
+
+  <!-- OFFCANVAS ALTERAR -->
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasAlterar">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title">Alterar aluno</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+
+    <div class="offcanvas-body">
+      <form>
+        <div class="mb-3">
+          <label class="form-label">RA do aluno</label>
+          <input type="text" class="form-control" placeholder="Digite o RA">
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Novo nome</label>
+          <input type="text" class="form-control" placeholder="Digite o novo nome">
+        </div>
+
+        <button type="button" class="btn btn-warning w-100">Alterar cadastro</button>
+      </form>
+    </div>
+  </div>
+
+
+  <!-- OFFCANVAS CONSULTAR -->
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasConsultar">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title">Consultar aluno</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+
+    <div class="offcanvas-body">
+      <div class="mb-3">
+        <label class="form-label">RA do aluno</label>
+        <input type="text" class="form-control" placeholder="Digite o RA">
+      </div>
+
+      <button type="button" class="btn btn-success w-100 mb-3">Consultar</button>
+
+      <div class="resultado">
+        <strong>Exemplo de cadastro</strong>
+        <p class="mb-1">Nome: João da Silva</p>
+        <p class="mb-1">RA: 123456</p>
+        <p class="mb-1">Turma: 2º DS</p>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- OFFCANVAS EXCLUIR -->
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExcluir">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title">Excluir aluno</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+
+    <div class="offcanvas-body">
+      <div class="mb-3">
+        <label class="form-label">RA do aluno</label>
+        <input type="text" class="form-control" placeholder="Digite o RA">
+      </div>
+
+      <button type="button" class="btn btn-danger w-100">Excluir cadastro</button>
+    </div>
+  </div>
+
+
+  <!-- NAVBAR INFERIOR / INFORMAÇÕES -->
+  <section class="container my-5">
+    <h2 class="text-center mb-4">Informações do sistema</h2>
+  
+    <div class="row justify-content-center g-4">
+  
+      <!-- Card 1 -->
+      <div class="col-md-4 d-flex justify-content-center">
+        <div class="card" style="width: 18rem;">
+          <img
+            class="card-img-top"
+            src="https://tse2.mm.bing.net/th/id/OIP.o-l25o9JWPT975eVTGmoXQHaEK?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
+            alt="Curso de Desenvolvimento de Sistemas"
+          >
+  
+          <div class="card-body">
+            <h5 class="card-title">Desenvolvimento de Sistemas</h5>
+            <p class="card-text">
+              Aprenda programação, criação de sites, aplicativos e bancos de dados.
+            </p>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Card 2 -->
+      <div class="col-md-4 d-flex justify-content-center">
+        <div class="card" style="width: 18rem;">
+          <img
+            class="card-img-top"
+            src="https://etecfernandopolis.com.br/site/imagens/?datahoraenvioImagem=1628711475&anoImagem=2021&extensaoImagem=image/jpeg&width=1500&height=800"
+            alt="Curso de Administração"
+          >
+  
+          <div class="card-body">
+            <h5 class="card-title">Administração</h5>
+            <p class="card-text">
+              Aprenda sobre gestão, organização, marketing e administração de empresas.
+            </p>
+          </div>
+        </div>
+      </div>
+  
+   
+      <div class="col-md-4 d-flex justify-content-center">
+        <div class="card" style="width: 18rem;">
+          <img
+            class="card-img-top"
+            src="https://tse3.mm.bing.net/th/id/OIP.-wByvESc-Ip2rVBEETFyQAHaE7?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
+            alt="Curso de Informática"
+          >
+  
+          <div class="card-body">
+            <h5 class="card-title">Informática</h5>
+            <p class="card-text">
+              Aprenda conceitos de informática, tecnologia, redes e ferramentas digitais.
+            </p>
+          </div>
+        </div>
+      </div>
+  
+    </div>
+  </section>
+
+  </div>
+</section>
+
+
+  <!-- RODAPÉ -->
+  <footer class="bg-dark text-white text-center p-3">
+    <p class="mb-2">&copy; 2026 Sistema Escolar. Todos os direitos reservados.</p>
+    <p class="mb-0">Projeto desenvolvido para fins acadêmicos.</p>
+  </footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

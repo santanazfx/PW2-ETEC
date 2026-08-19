@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <head>
+        <title>Formularios</title>
+    </head>
+<body>
+<form action="cadastarar.php" method="POST">
+
+    <br>
+    <div class="mb-3">
+    <label for="rm">RM:</label>
+    <input type="name" name="RM" id="RM" placeholder="0 Desprezivel" minlength="5" required>
+    </div>
+
+    
+    <div class="mb-3">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+    </div>
+    
+   
+    <div>
+        <label for="curso">Curso:</label>
+        <input type="text" id="Curso" name="Curso" placeholder="Digite seu Curso" required>
+    </div>
+    <br>
+    
+    <div>
+        <label for="Unidade">Unidade:</label>
+        <select class="form-select" aria-label="Default select example " id="Unidade" name="Unidade">
+            <option value ="Extenção FATEC Antonio Brambila ">FATEC</option>
+            <option value ="ETEC Prefeito Alberto Feres">ETEC</option>
+        </select>
+    </div>
+    
+    <br>
+    
+    <div class="mb-3">
+        <label for="email" class="form-label">E-mal Corporativo:</label>
+        <input type="email" class="form-text"  id="email" name="email" placeholder="dev@.empresa.com" required>
+    </div>
+    
+    
+    <div class="mb-3">
+        <label for="Senha" class="form-label">Password: </label>
+        <input type="password" class="form-control"  name="Senha" id="Senha" minlength="10" required>
+    </div>
+
+    
+    
+  <button type="submit" class="btn btn-primary">Submit</button>
+    
+</form>
+</body>
+</html>
