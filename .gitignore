@@ -1,1 +1,22 @@
 /Sistema_Escolar_Bootstrap.zip
+# IntelliJ IDEA
+.idea/
+*.iml
+
+# VS Code
+.vscode/
+
+# Arquivos compactados
+*.zip
+*.rar
+*.7z
+
+# Arquivos temporários
+*.tmp
+*.temp
+*.log
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+desktop.ini
