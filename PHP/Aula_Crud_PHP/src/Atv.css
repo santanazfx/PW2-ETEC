@@ -1,0 +1,90 @@
+body {
+  padding-top: 56px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f5f5f5;
+}
+
+/* CABEÇALHO */
+.cabecalho {
+  padding: 45px 20px;
+  background-color: #212529;
+  color: white;
+  text-align: center;
+}
+
+.cabecalho h1 {
+  margin-bottom: 8px;
+}
+
+.cabecalho h2 {
+  font-size: 22px;
+  font-weight: normal;
+}
+
+.cabecalho p {
+  margin-bottom: 0;
+}
+
+
+/* CAROUSEL */
+.carousel-item img {
+  height: 400px;
+  object-fit: cover;
+}
+
+.carousel-caption {
+  background-color: rgba(0, 0, 0, 0.65);
+  border-radius: 8px;
+  padding: 15px;
+}
+
+
+/* CARDS */
+.card {
+  border: 1px solid #ddd;
+  transition: 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.card-text {
+  min-height: 48px;
+}
+
+.icone {
+  font-size: 45px;
+  margin-bottom: 10px;
+}
+
+
+/* OFFCANVAS */
+.resultado {
+  background-color: #f1f1f1;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 15px;
+}
+
+
+/* INFORMAÇÕES */
+.info-box {
+  min-height: 150px;
+  padding: 25px;
+  border-radius: 8px;
+}
+
+.info-box i {
+  font-size: 30px;
+}
+
+.info-box h5 {
+  margin-top: 10px;
+}
+
+
+/* RODAPÉ */
+footer {
+  margin-top: 40px;
+}

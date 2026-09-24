@@ -22,4 +22,6 @@ Thumbs.db
 desktop.ini
 
 #Chaves
-*.pub  
+*.pub
+.ssh/
+
