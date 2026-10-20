@@ -48,6 +48,7 @@
  echo "<tr>";
  echo "<th>NOME</th>";
  echo "<th>SOBRENOME</th>";
+ echo "<th>RM</th>";
  echo "<th>SEXO</th>";
  echo "</tr>";
 
@@ -72,11 +73,13 @@
  {
     $nome = htmlspecialchars($registro['NomeCliente']);
     $sobrenome = htmlspecialchars($registro['SobrenomeCliente']);
+    $rm = htmlspecialchars($registro['RM']);
     $sexo = htmlspecialchars($registro['Sexo']);
 
     echo "<tr>";
     echo "<td>".$nome."</td>";
     echo "<td>".$sobrenome."</td>";
+    echo "<td>".$rm."</td>";
     echo "<td>".$sexo."</td>";
     echo "</tr>";
  }

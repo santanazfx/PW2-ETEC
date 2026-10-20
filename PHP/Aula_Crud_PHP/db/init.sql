@@ -10,7 +10,11 @@ CREATE TABLE IF NOT EXISTS cliente (
     IdCliente INT AUTO_INCREMENT PRIMARY KEY,
     NomeCliente VARCHAR(50) NOT NULL,
     SobrenomeCliente VARCHAR(50) NOT NULL,
-    Sexo ENUM('M', 'F', 'N') NOT NULL
+    Sexo ENUM('M', 'F', 'N') NOT NULL,
+    RmCliente CHAR(5) NOT NULLerbloco de notas
+    
+
+    
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- Garante privilégios do usuário da aplicação sobre o banco
