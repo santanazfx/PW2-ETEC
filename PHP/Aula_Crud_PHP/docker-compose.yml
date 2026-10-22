@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   web:
     build: .
@@ -21,8 +19,8 @@ services:
     environment:
       MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
       MYSQL_DATABASE: aulaphp
-      MYSQL_USER: aluno_user
-      MYSQL_PASSWORD: aluno_pass
+      MYSQL_USER: root
+      MYSQL_PASSWORD: "1234"
     ports:
       - "3306:3306"
     volumes:

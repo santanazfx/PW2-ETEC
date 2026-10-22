@@ -11,7 +11,7 @@ CREATE TABLE IF NOT EXISTS cliente (
     NomeCliente VARCHAR(50) NOT NULL,
     SobrenomeCliente VARCHAR(50) NOT NULL,
     Sexo ENUM('M', 'F', 'N') NOT NULL,
-    RmCliente CHAR(5) NOT NULLerbloco de notas
+    RmCliente CHAR(5) NOT NULL
     
 
     
