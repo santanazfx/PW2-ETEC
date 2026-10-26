@@ -12,11 +12,6 @@ CREATE TABLE IF NOT EXISTS cliente (
     SobrenomeCliente VARCHAR(50) NOT NULL,
     Sexo ENUM('M', 'F', 'N') NOT NULL,
     RmCliente CHAR(5) NOT NULL
-    
 
-    
+
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- Garante privilégios do usuário da aplicação sobre o banco
-GRANT ALL PRIVILEGES ON aulaphp.* TO 'aluno_user'@'%';
-FLUSH PRIVILEGES;

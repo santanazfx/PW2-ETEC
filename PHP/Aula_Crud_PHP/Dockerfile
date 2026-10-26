@@ -1,4 +1,5 @@
-FROM php:8.2-apache
+FROM php:8.6.0RC4-apache
+
 
 # Instala extensões necessárias para conexão com MySQL
 RUN docker-php-ext-install pdo pdo_mysql mysqli

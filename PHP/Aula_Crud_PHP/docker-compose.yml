@@ -17,10 +17,10 @@ services:
     container_name: aulaphp_db
     restart: always
     environment:
-      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
       MYSQL_DATABASE: aulaphp
-      MYSQL_USER: root
+      MYSQL_USER: aulaphp_user
       MYSQL_PASSWORD: "1234"
+      MYSQL_ROOT_PASSWORD: "12345"
     ports:
       - "3306:3306"
     volumes:
@@ -38,7 +38,7 @@ services:
     environment:
       PMA_HOST: db
       PMA_USER: root
-      PMA_PASSWORD: "1234"
+      PMA_PASSWORD: "12345"
     depends_on:
       - db
     networks:
