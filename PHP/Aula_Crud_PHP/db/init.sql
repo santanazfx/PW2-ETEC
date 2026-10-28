@@ -4,6 +4,8 @@ CREATE DATABASE IF NOT EXISTS aulaphp
   COLLATE utf8mb4_general_ci;
 
 USE aulaphp;
+DROP TABLE cliente
+
 
 -- Criação da tabela cliente
 CREATE TABLE IF NOT EXISTS cliente (
@@ -11,7 +13,8 @@ CREATE TABLE IF NOT EXISTS cliente (
     NomeCliente VARCHAR(50) NOT NULL,
     SobrenomeCliente VARCHAR(50) NOT NULL,
     Sexo ENUM('M', 'F', 'N') NOT NULL,
-    RmCliente CHAR(5) NOT NULL
+    RmAluno CHAR(5) NOT NULL, `Data_Cadastro`
+    DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
 
 
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;

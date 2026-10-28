@@ -11,8 +11,8 @@
  // "db" é o nome do serviço do MySQL no docker-compose.yml,
  // não "localhost" (que apontaria para dentro do próprio container web)
  $servidor="db";
- $usuario="aluno_user";
- $senha="aluno_pass";
+ $usuario="aulaphp_user";
+ $senha="1234";
  $dbname="aulaphp";
 
  $strcon = mysqli_connect($servidor, $usuario, $senha, $dbname);
@@ -29,7 +29,7 @@
  {
     $nome = htmlspecialchars($registro['NomeCliente']);
     $sobrenome = htmlspecialchars($registro['SobrenomeCliente']);
-    $rm = htmlspecialchars($registro['RM']);
+    $rm = htmlspecialchars($registro['RmAluno']);
     $sexo = htmlspecialchars($registro['Sexo']);
 
     echo "<tr>";

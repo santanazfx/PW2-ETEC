@@ -7,8 +7,8 @@
 	// "db" é o nome do serviço do MySQL no docker-compose.yml,
 	// não "localhost" (que apontaria para dentro do próprio container web)
 	$servidor="db";
-	$usuario="aluno_user";
-	$senha="aluno_pass";
+	$usuario="aulaphp_user";
+	$senha="1234";
 	$dbname="aulaphp";
 
 	// mysqli_report ativo por padrão no PHP 8+ lança exceções em erro de conexão
@@ -19,7 +19,7 @@
 	}
 
 	// Usando prepared statement para evitar SQL Injection
-	$incluir = "INSERT INTO cliente (NomeCliente, SobrenomeCliente, RmCliente, Sexo)
+	$incluir = "INSERT INTO cliente (NomeCliente, SobrenomeCliente, RmAluno, Sexo)
 	VALUES (?, ?, ?, ?)";
 	$stmt = mysqli_prepare($strcon, $incluir);
 
