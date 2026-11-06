@@ -1,6 +1,7 @@
 <?php
 	$nome=trim($_POST['NomeAluno']??'');
 	$sobrenome=trim($_POST['SobrenomeAluno']??'');
+	$turma=trim($_POST['Turma']??'');
 	$rm=trim($_POST['RmAluno']??'');
 	$sexo=trim($_POST['Sexo']??'');
 
@@ -19,15 +20,15 @@
 	}
 
 	// Usando prepared statement para evitar SQL Injection
-	$incluir = "INSERT INTO cliente (NomeCliente, SobrenomeCliente, RmAluno, Sexo)
-	VALUES (?, ?, ?, ?)";
+	$incluir = "INSERT INTO clientes (NomeCliente, SobrenomeCliente, Turma, RmAluno, Sexo)
+	VALUES (?, ?, ?, ?, ?)";
 	$stmt = mysqli_prepare($strcon, $incluir);
 
 	if (!$stmt) {
 		die("Erro ao preparar consulta: " . mysqli_error($strcon));
 	}
 
-	mysqli_stmt_bind_param($stmt, "ssss", $nome, $sobrenome, $rm, $sexo);
+	mysqli_stmt_bind_param($stmt, "sssss", $nome, $sobrenome, $turma, $rm, $sexo);
 
 	if (!mysqli_stmt_execute($stmt)) {
 		die("Erro ao tentar cadastrar: " . mysqli_stmt_error($stmt));

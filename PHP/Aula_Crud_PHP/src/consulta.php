@@ -1,9 +1,12 @@
 <?php
+    $RmInse=trim($_POST['RmAluno']??'');
+
 
  echo "<table border=1>";
  echo "<tr>";
  echo "<th>NOME</th>";
  echo "<th>SOBRENOME</th>";
+ echo "<th>TURMA</th>";
  echo "<th>RM</th>";
  echo "<th>SEXO</th>";
  echo "</tr>";
@@ -21,7 +24,8 @@
      die("Erro ao conectar: " . mysqli_connect_error());
  }
 
- $consulta = "SELECT * FROM cliente";
+    $consulta = "SELECT * FROM clientes WHERE RmAluno=$RmInse ";
+//  $consulta = "SELECT * FROM cliente";
  $resultado = mysqli_query($strcon, $consulta) or die("Erro ao retornar dados: " . mysqli_error($strcon));
 
  // Obtendo os dados por meio de um loop while
@@ -31,12 +35,14 @@
     $sobrenome = htmlspecialchars($registro['SobrenomeCliente']);
     $rm = htmlspecialchars($registro['RmAluno']);
     $sexo = htmlspecialchars($registro['Sexo']);
+    $turma = htmlspecialchars($registro['Turma']);
 
     echo "<tr>";
     echo "<td>".$nome."</td>";
     echo "<td>".$sobrenome."</td>";
-    echo "<td>".$rm."</td>";
     echo "<td>".$sexo."</td>";
+    echo "<td>".$turma."</td>";
+    echo "<td>".$rm."</td>";
     echo "</tr>";
  }
 

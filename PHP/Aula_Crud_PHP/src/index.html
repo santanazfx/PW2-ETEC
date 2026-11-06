@@ -187,6 +187,7 @@
 
 
   <!-- OFFCANVAS CADASTRO -->
+   <!-- itens aqui tem que ser obrigatorios se n vai dar merda -->
   <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasCadastro">
     <div class="offcanvas-header">
       <h5 class="offcanvas-title">Cadastrar aluno</h5>
@@ -197,22 +198,22 @@
       <form name="Cadastro" action="cadastrar.php" method="POST">
         <div class="mb-3">
           <label class="form-label">Nome</label>
-          <input type="text" name="NomeAluno" class="form-control" size="50" placeholder="Nome do aluno">
+          <input type="text" name="NomeAluno" class="form-control" size="50" placeholder="Nome do aluno" required>
         </div>
 
         <div class="mb-3">
           <label class="form-label">Sobrenome</label>
-          <input type="text" name="SobrenomeAluno" class="form-control" size="50" placeholder="Sobre Nome do aluno">
+          <input type="text" name="SobrenomeAluno" class="form-control" size="50" placeholder="Sobre Nome do aluno" required>
         </div>
 
         <div class="mb-4">
           <label class="form-label">RM</label>
-          <input type="text" name="RmAluno" class="form-control" size="5" placeholder="Registro do aluno">
+          <input type="text" name="RmAluno" class="form-control" size="5" placeholder="Registro do aluno" required>
         </div>
 
         <div class="mb-4">
          <select class="form-select" name="Sexo">
-        <option selected>Nao Declarado</option>
+        <option value="NA" selected>Nao Declarado</option>
         <option value="F">Feminino</option>
         <option value="M">Masculino</option>
         </select>
@@ -220,12 +221,11 @@
 
       <div class="mb-3">
         <select class="form-select" name="Turma">
-        <option selected>Desenvolvimento de Sistemas</option>
+        <option value="DS" selected>Desenvolvimento de Sistemas</option>
         <option value="ADM">Administração</option>
         <option value="QUI">Quimica</option>
-        <option value="NUTRI">Nutricao</option>
-        <option value="MECA">Mecatronica</option>
-        <option value="MA">Meio Ambeinte</option>
+        <option value="OUT">Outros</option>
+
       </select>
   </div>
 
@@ -269,11 +269,12 @@
 
     <div class="offcanvas-body">
       <div class="mb-3">
-        <label class="form-label">RA do aluno</label>
-        <input type="text" class="form-control" placeholder="Digite o RA">
+        <form name="Consulta" action="consulta.php" method="POST">
+        <label class="form-label">Rm do aluno</label>
+        <input type="text" size="5" name="RmAluno" class="form-control" placeholder="Digite o Rm" >
       </div>
-
-      <button type="button" class="btn btn-success w-100 mb-3">Consultar</button>
+        <button type="submit" class="btn btn-success w-100 mb-3">Consultar</button>
+        </form>
 
       <div class="resultado">
         <strong>Exemplo de cadastro</strong>
