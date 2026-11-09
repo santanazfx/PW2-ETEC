@@ -208,7 +208,7 @@
 
         <div class="mb-4">
           <label class="form-label">RM</label>
-          <input type="text" name="RmAluno" class="form-control" size="5" placeholder="Registro do aluno" required>
+          <input type="text" pattern="\d{5}" name="RmAluno" class="form-control" size="5" placeholder="Registro do aluno" required>
         </div>
 
         <div class="mb-4">
@@ -216,17 +216,17 @@
         <option value="NA" selected>Nao Declarado</option>
         <option value="F">Feminino</option>
         <option value="M">Masculino</option>
-        </select>
-      </div>
+          </select>
+        </div>
 
-      <div class="mb-3">
-        <select class="form-select" name="Turma">
-        <option value="DS" selected>Desenvolvimento de Sistemas</option>
-        <option value="ADM">Administração</option>
-        <option value="QUI">Quimica</option>
-        <option value="OUT">Outros</option>
-
-      </select>
+        <div class="mb-3">
+          <select class="form-select" name="Turma">
+            <option value="DS" selected>Desenvolvimento de Sistemas</option>
+            <option value="ADM">Administração</option>
+            <option value="QUI">Quimica</option>
+            <option value="OUT">Outros</option>
+          </select>
+        </div>
   </div>
 
         <button type="submit" value="Cadastrar" class="btn btn-primary w-100 mb-4">Cadastrar</button>
@@ -236,6 +236,7 @@
 
 
   <!-- OFFCANVAS ALTERAR -->
+
   <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasAlterar">
     <div class="offcanvas-header">
       <h5 class="offcanvas-title">Alterar aluno</h5>
@@ -243,18 +244,18 @@
     </div>
 
     <div class="offcanvas-body">
-      <form>
+      <form name="Alterar" action="alterar.php" method="POST">
         <div class="mb-3">
-          <label class="form-label">RA do aluno</label>
-          <input type="text" class="form-control" placeholder="Digite o RA">
+          <label class="form-label">RM do aluno</label>
+          <input type="text" name="RmAluno" pattern="\d{5}" size="5" class="form-control" placeholder="Digite o RM" required>
         </div>
 
         <div class="mb-3">
-          <label class="form-label">Novo nome</label>
-          <input type="text" class="form-control" placeholder="Digite o novo nome">
+          <label class="form-label">Novo nome</label> <!--adicionar um patern de somente letras aqui -->
+          <input type="text" name="NomeAluno" class="form-control" size="50" placeholder="Digite o novo nome" required>
         </div>
 
-        <button type="button" class="btn btn-warning w-100">Alterar cadastro</button>
+        <button type="submit" value="Alterar" class="btn btn-warning w-100">Alterar cadastro</button>
       </form>
     </div>
   </div>
@@ -271,7 +272,7 @@
       <div class="mb-3">
         <form name="Consulta" action="consulta.php" method="POST">
         <label class="form-label">Rm do aluno</label>
-        <input type="text" size="5" name="RmAluno" class="form-control" placeholder="Digite o Rm" >
+        <input type="text" size="5" pattern="\d{5}" name="RmAluno" class="form-control" placeholder="Digite o Rm" required>
       </div>
         <button type="submit" class="btn btn-success w-100 mb-3">Consultar</button>
         </form>
@@ -285,7 +286,6 @@
     </div>
   </div>
 
-
   <!-- OFFCANVAS EXCLUIR -->
   <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExcluir">
     <div class="offcanvas-header">
@@ -295,8 +295,8 @@
 
     <div class="offcanvas-body">
       <div class="mb-3">
-        <label class="form-label">RA do aluno</label>
-        <input type="text" class="form-control" placeholder="Digite o RA">
+        <label class="form-label">RM do aluno</label>
+        <input type="text" pattern="\d{5}" size="5" class="form-control" placeholder="Digite o RA" required>
       </div>
 
       <button type="button" class="btn btn-danger w-100">Excluir cadastro</button>

@@ -24,9 +24,11 @@
      die("Erro ao conectar: " . mysqli_connect_error());
  }
 
-    $consulta = "SELECT * FROM clientes WHERE RmAluno=$RmInse ";
+    $stmt = mysqli_prepare($strcon, "SELECT * FROM clientes WHERE RmAluno=?");
 //  $consulta = "SELECT * FROM cliente";
- $resultado = mysqli_query($strcon, $consulta) or die("Erro ao retornar dados: " . mysqli_error($strcon));
+    mysqli_stmt_bind_param($stmt, "s", $RmInse);
+    mysqli_stmt_execute($stmt);
+    $resultado = mysqli_stmt_get_result($stmt);
 
  // Obtendo os dados por meio de um loop while
  while ($registro = mysqli_fetch_array($resultado))
